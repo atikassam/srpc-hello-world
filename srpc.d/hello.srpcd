@@ -1,0 +1,6 @@
+package example
+
+service class Example {
+    hello(): string
+    hi(name: string): string
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<script src="./rpc.client.bundle.js"></script>
+<!--<script src="./client.build.js"></script>-->
+<body>
+<h2>Response From RPC</h2>
+<h1 id="rpc-resp">No Response</h1>
+
+<script type="text/javascript">
+    new example.ExampleClient('http://localhost:8080', {})
+        .init()
+        .then(async (service) => {
+            // document.getElementById('rpc-resp').innerText = await service.hello()
+            document.getElementById('rpc-resp').innerText = await service.hi('Example Name')
+        });
+</script>
+</body>
+</html>
